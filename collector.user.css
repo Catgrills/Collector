@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.0.1
+@version        1.0.2
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1842,6 +1842,17 @@
         font-stretch: condensed;
     }
 
+    #ref-thread-bottom {
+        background: transparent !important;
+    }
+
+    .tbx-window.thread-reply-button {
+        color: #FFF !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        padding-bottom: 2px !important;
+    }
+    
     /* PROFILE */
 
     /** DESCRIPTION : change the elements of the profile page **/
