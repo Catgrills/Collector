@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.0.0
+@version        1.0.1
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1549,7 +1549,8 @@
     /* ADS ITEM */
 
     /** DESCRIPTON : change the elements of the ads item page **/
-    #ariadne {
+    #ariadne,
+    .custom #ariadne {
         background: transparent;
         color: var(--primary-color) !important;
         font-size: 12pt !important;
