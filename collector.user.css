@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.0.5
+@version        1.0.6
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1071,6 +1071,20 @@
     .listing li.listing-nothing {
         background: transparent !important;
     }
+    
+    /* TAG */
+    
+    /** DESCRIPTION : change the elements of the tag page **/
+    .listing-text-query * {
+        font-size: 12pt !important;
+    }
+    
+    .tbx-suggestions * {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+    }
 
     /* SHOP */
 
@@ -1078,7 +1092,40 @@
     .list.shop-list.shop-is-partner {
         background: transparent !important;
     }
+ 
+    .shop-content {
+        background: transparent !important;
+        border: none !important;
+    }
+    
+    .success {
+        background: var(--card-bg-2) !important;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        padding: 7px 12px 9px 12px !important;
+        margin: -1px -10px !important;
+    }
+    
+    .shop-content div[itemprop="description"] * {
+        font-size: 14pt !important;
+        line-height: 20pt !important;
+    }
+    
+    .shop-average-score {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        color: var(--primary-color ) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        padding-bottom: 6px !important;
+    }
 
+    .user-expression .expression .username {
+        font-size: 14pt;
+        font-stretch: condensed;
+    }
+    
     /* PICTURES */
 
     /** DESCRIPTION : change the elements of the pictures page **/
@@ -2204,6 +2251,7 @@
     .object-is-draft {
         background: transparent !important;
         border-color: var(--border-color) !important;
+        color: var(--primary-color) !important;
         font-size: 12pt !important;
         font-stretch: condensed;
     }
