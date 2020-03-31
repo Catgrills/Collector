@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.0.2
+@version        1.0.3
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1030,6 +1030,41 @@
 
     fieldset.calendar a.month.selected {
         color: var(--primary-color) !important;
+    }
+    
+    /* ENTRY */
+    
+    /** DESCRIPTION : change the elements of the entry page **/
+    .entry-items {
+        background: transparent !important;
+        border: none !important;
+        padding: 10px 0px !important;
+    }
+    
+    .entry-category {
+        border-radius: 2px !important;
+        font-size: 12pt !important;
+        padding-bottom: 2px !important;
+    }
+    
+    .entry-description {
+        background: transparent !important;
+        border: none !important;
+        padding: 8px !important;
+    }
+    
+    .entry-description * {
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
+        line-height: 20pt;
+    }
+    
+    .object-source,
+    .object-source * {
+        color: var(--secondary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
     }
 
     /* SHOP */
@@ -2164,6 +2199,8 @@
     .object-is-draft {
         background: transparent !important;
         border-color: var(--border-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
     }
 
     .item-object,
