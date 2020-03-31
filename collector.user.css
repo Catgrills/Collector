@@ -1106,6 +1106,12 @@
         padding: 7px 12px 9px 12px !important;
         margin: -1px -10px !important;
     }
+
+    .shop-category {
+        border-radius: 2px !important;
+        font-size: 12pt !important;
+        padding-bottom: 3px !important;
+    }
     
     .shop-content div[itemprop="description"] * {
         font-size: 14pt !important;
