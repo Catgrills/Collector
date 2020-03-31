@@ -264,6 +264,10 @@
     .object-is-not-alerted.actions.report {
         color: #B33939 !important;
     }
+    
+    a:link {
+        color: var(--primary-color);
+    }
 
     .picture-icon .picture-category-6 {
 
@@ -1111,6 +1115,10 @@
         border-radius: 2px !important;
         font-size: 12pt !important;
         padding-bottom: 3px !important;
+    }
+   
+    .shop-category .tiny-icon-before::before {
+        color: #FFF !important;
     }
     
     .shop-content div[itemprop="description"] * {
