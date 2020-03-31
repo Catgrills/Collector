@@ -1877,7 +1877,7 @@
     }
 
     .itemlist-object .itemlist-content *,
-    .alert-content,
+    .alert-content *,
     .club-object .object-content *,
     .blog-object .blog-content * {
         color: var(--primary-color);
