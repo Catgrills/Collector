@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.0.7
+@version        1.0.8
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -2045,9 +2045,14 @@
     .section-content .picture-icon a[class*="picture-category-"],
     .picture-icons {
 
-        /*** PROFILE OVERVIEW FAVORITE PICTURES ***/
+        /*** PROFILE OVERVIEW PICTURES ***/
         background: transparent !important;
         padding: 0px !important;
+    }
+    
+    .item-picture-categories a[class*="picture-category-"] *, 
+    .item-picture-categories a[class*="picture-category-"] {
+        color: #FFF !important;
     }
 
     section .listing .object-grid {
