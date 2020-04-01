@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.0.9
+@version        1.1.0
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -848,7 +848,8 @@
         border-radius: 2px !important;
     }
 
-    .item-is-collected-as {
+    .item-is-collected-as,
+    .item-icons .item-icon .item-is-alerted {
 
         /*** HOME DATABASES CARDS FAVORITE ICON  ***/
         border-radius: 50% !important;
@@ -861,13 +862,15 @@
     }
 
     .tiny-icon-only.icon-star,
-    .tiny-icon-only.icon-shopping-cart {
+    .tiny-icon-only.icon-shopping-cart,
+    .item-icons .item-icon .item-is-alerted .icon-bullhorn {
         font-size: 20pt !important;
         line-height: 44pt !important;
     }
 
     .item-icon .item-is-collected-as .icon-star::before,
-    .tiny-icon-only.icon-shopping-cart::before {
+    .tiny-icon-only.icon-shopping-cart::before,
+    .item-icons .item-icon .item-is-alerted .icon-bullhorn::before {
         color: #FFF !important;
         line-height: 44pt !important;
     }
