@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.1.0
+@version        1.1.1
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -882,7 +882,8 @@
     .star.off.icon-star.on::before {
         color: #E58E26 !important;
     }
-
+    
+    .off.icon-star::before,
     .star.off.icon-star::before {
         color: var(--card-bg-2) !important;
     }
