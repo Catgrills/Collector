@@ -641,6 +641,7 @@
         color: var(--primary-color);
         font-size: 14pt;
         font-stretch: condensed;
+        line-height: 20pt;
     }
     
     .window-content .user-expression .expression .meta .time {
