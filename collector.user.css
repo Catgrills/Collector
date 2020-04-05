@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.1.4
+@version        1.1.5
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -543,7 +543,12 @@
     }
 
     #window .wrapper h2 .actions {
+        background: transparent;
         border: none !important;
+    }
+    
+   #window .wrapper h2 .actions .tbx-window {
+        background: transparent !important;
     }
 
     #window .wrapper h2 .actions a:hover {
