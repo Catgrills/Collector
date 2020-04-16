@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.1.5
+@version        1.1.6
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -47,12 +47,25 @@
         border: 0 !important;
     }
 
-    body:not(.custom) {
+    body:not(.custom),
+    #content {
         background-color: var(--body-bg) !important;
     }
 
-    #content {
-        margin-top: 80px !important;
+    #content .content_wrapper {
+        width: 95% !important;
+    }
+    
+    .h1_actions a.action:hover, 
+    .listing-count-pages a:hover, 
+    .reply-actions a:hover, 
+    h2 .actions a:hover, 
+    h2 a.count:hover,
+    ul.suggestions li a:hover {
+        
+        /*** HOVER ***/
+        background: transparent;
+        opacity: .6;
     }
 
     .icon-ban,
@@ -79,7 +92,9 @@
     .icon-comments,
     .icon-comments::before,
     .icon-envelope,
+    .icon-envelope-o,
     .icon-home,
+    .icon-quote-right::before,
     .icon-shield,
     .icon-shopping-cart::before,
     .icon-twitter {
@@ -97,8 +112,10 @@
     .icon-diamond,
     .icon-diamond::before,
     .icon-picture-o,
+    .icon-share-square-o::before,
     .icon-sign-in::before,
     .icon-tag,
+    .icon-tag::before,
     .icon-tags,
     .icon-tags::before,
     .icon-thumbs-up,
@@ -116,6 +133,7 @@
     .icon-fire,
     .icon-fire::before,
     .icon-folder::before,
+    .icon-life-ring::before,
     .icon-paper-plane,
     .icon-sticky-note,
     .icon-sticky-note::before {
@@ -181,6 +199,14 @@
         color: #FFF !important;
         font-size: 12pt !important;
     }
+    
+    .category.user-access-rank.user-access-rank-0.user-honorific-rank-0 {
+        background: #006266 !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        font-size: 14pt !important;
+        margin-right: 15px !important;
+    }
 
     .classified-type-1,
     .blog-category-5,
@@ -209,6 +235,7 @@
 
     .blog-category-3,
     .entry-category-3,
+    .category.club-category.club-category-3,
     .category.picture-category-6 {
         background: #182C61 !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
@@ -232,6 +259,17 @@
         color: #FFF !important;
         font-size: 12pt !important;
     }
+    
+    .category.club-category-0,
+    .category.club-category-1,
+    .category.club-category-2,
+    .category.club-category-3,
+    .category.club-category-4,
+    .category.club-category-5,
+    .category.club-category-6 {
+        font-size: 14pt !important;
+        margin-right: 15px !important;
+    }
 
     .listing-category {
         background: var(--card-bg-2);
@@ -241,7 +279,7 @@
 
     .stamp-category[class*="entry-category-"] {
         color: #FFF !important;
-        padding-bottom: 3px;
+        padding-bottom: 1px;
     }
 
     .item-stamp .stamp-anchor a.item-category-1,
@@ -298,7 +336,7 @@
     }
 
     #banner {
-        background-position: 50% 25% !important;
+        background-position: 50% 31% !important;
         border: none;
         box-shadow: none !important;
     }
@@ -395,6 +433,12 @@
     .menu li .tiny-icon-before {
         margin-top: 3px;
     }
+    
+    #menu li .menu li.break, 
+    .lang-menu .menu .separator, 
+    .user-menu .menu .separator {
+        border-top-style: solid;
+    }
 
     #search {
 
@@ -483,7 +527,14 @@
         position: fixed !important;
         right: 20px !important;
         bottom: 20px !important;
+        opacity: .5;
+        transition: all .3s ease-in-out !important;
         visibility: visible !important
+    }
+    
+    .top:hover {
+        opacity: 1;
+        transition: all .3s ease-in-out !important;
     }
 
     .top .icon-chevron-up {
@@ -539,6 +590,8 @@
     }
 
     #window .wrapper h2 {
+        padding-top: 5px;
+        padding-bottom: 8px;
         padding-left: 15px;
     }
 
@@ -547,8 +600,9 @@
         border: none !important;
     }
     
-   #window .wrapper h2 .actions .tbx-window {
-        background: transparent !important;
+    #window .wrapper h2 .actions .tbx-window {
+        background: 
+        transparent !important;
     }
 
     #window .wrapper h2 .actions a:hover {
@@ -565,7 +619,7 @@
     #window .wrapper .window-content {
         background: var(--body-bg);
     }
-
+    
     #window .wrapper h3 {
         color: var(--primary-color);
         font-size: 14pt;
@@ -588,7 +642,7 @@
     }
 
     #window .listing > li:first-child {
-        border-color: var(--border-color);
+        border: none;
     }
 
     #window .listing > li:first-child * {
@@ -630,8 +684,8 @@
     #window .tbx-picked-suggestions.listing.selected {
         border: 1px solid var(--border-color) !important;
     }
-    
-   .window-content .user-expression .expression .content {
+
+    .window-content .user-expression .expression .content {
         background: var(--card-bg-2) !important;
         border: 1px solid var(--border-color);
         border-radius: 2px !important;
@@ -648,7 +702,36 @@
         font-size: 14pt;
         font-stretch: condensed;
     }
+    
+    #window .user-expression .avatar img {
+        border: 1px solid var(--border-color) !important;
+        border-radius: 50% !important;
+    }
 
+    #window .user-expression .expression .meta .tbx-click {
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+    }
+    
+    #window .time * {
+        color: var(--primary-color);
+    }
+    
+    .stamp .tbx-tooltip {
+        font-size: 14pt !important;
+    }
+    
+    #window .tbx-window.toggle {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        padding-bottom: 10px !important;
+    }
+    
+    #window .tbx-window.toggle.on {
+        color: #7E7E7E !important;
+    }
+    
     /* ITEM PREVIEW POPUP */
 
     /** DESCRIPTION : change the elements of the item preview popup **/
@@ -668,15 +751,15 @@
     }
 
     .tooltip {
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
+        background: #22272d !important;
+        border: 1px solid #000;
         border-radius: 2px;
         box-shadow: none;
     }
 
     .tooltip * {
         border-radius: 0px !important;
-        color: var(--primary-color) !important;
+        color: #FFF !important;
         font-size: 12pt !important;
         font-stretch: condensed !important;
         line-height: 15pt !important;
@@ -690,7 +773,30 @@
 
     /** DESCRIPTION : change the elements of the home page **/
     #side .wrapper {
-        padding: 8px 0 8px 20px !important;
+        padding: 8px 0px !important;
+    }
+    
+    .h1_headline {
+        
+        /*** HOME HEAD LINES ***/
+        color: var(--primary-color);
+        font-size: 20pt !important;
+        font-stretch: condensed;
+    }
+    
+    .h1_icon .icon {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+    }
+    
+    .h1_actions a.action {
+        padding: 0px 5px !important;
+    }
+    
+    .h1_actions * {
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
     }
 
     section {
@@ -704,25 +810,16 @@
         overflow: hidden;
     }
 
-    .custom section {
-        background: var(--card-bg-op);
-        border: 1px solid var(--border-color);
-        border-radius: 2px !important;
-        padding: 8px 10px !important;
-        margin-bottom: 20px !important;
-        overflow: hidden;
-    }
-
     section h2 {
 
         /*** HOME ALL CARDS TITLE ***/
         border-bottom: 1px solid var(--border-color) !important;
         color: var(--primary-color);
-        font-size: 12pt;
+        font-size: 14pt;
         font-stretch: condensed;
         font-weight: bold;
         letter-spacing: .1px;
-        padding: 9px 18px 10px 18px !important;
+        padding: 11px 18px 10px 18px !important;
         text-transform: uppercase !important;
         margin: -9px -10px 0px -10px !important;
     }
@@ -774,6 +871,10 @@
         font-stretch: condensed !important;
         margin-top: 10px !important;
     }
+    
+    section .subtab li {
+        margin-right: 11px;    
+    }
 
     .subtab li a {
         padding: 2px !important;
@@ -797,7 +898,7 @@
     section .subtab .count {
         background: transparent;
         color: var(--primary-color) !important;
-        font-size: 12pt !important;
+        font-size: 14pt !important;
     }
 
     section .subtab a.selected {
@@ -806,7 +907,9 @@
         border-radius: 2px;
         box-shadow: none;
         color: var(--primary-color) !important;
-        padding-bottom: 6px !important;
+        padding-bottom: 5px !important;
+        padding-right: 8px !important;
+        padding-left: 8px !important;
     }
 
     section .section-content,
@@ -840,19 +943,34 @@
     }
 
     section .listing .listing-item {
-        background: transparent;
+        background: transparent !important;
         border-color: var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        border-top: none;
+        margin-bottom: -1px;
+    }
+
+    #side section .listing .listing-item {
+        padding: 3px;
+    }
+    
+    section .listing .listing-item:nth-last-child(1) {
+        border: none !important;
     }
 
     section .listing .list {
         padding: 8px !important;
     }
-
+    
     section .listing .listing-item * {
         color: var(--primary-color);
         font-size: 12pt;
         font-stretch: condensed;
         line-height: 18pt;
+    }
+    
+    section .listing .list-data .list-anchor a {
+        font-size: 14pt !important;
     }
 
     .stamp {
@@ -877,8 +995,8 @@
         border-radius: 2px !important;
     }
 
-    .item-times-collected,
     .item-is-collected-as,
+    .item-times-collected,
     .item-icons .item-icon .item-is-alerted {
 
         /*** HOME DATABASES CARDS FAVORITE ICON  ***/
@@ -920,13 +1038,13 @@
     
     .off.icon-star::before,
     .star.off.icon-star::before {
-        color: var(--card-bg-2) !important;
+        color: #BEBEBE !important;
     }
 
     .item-icons .item-icon a .item-is-draft {
         color: #FFF !important;
         font-size: 10pt !important;
-        top: 22px !important;
+        top: 17px !important;
         opacity: .8;
     }
 
@@ -939,9 +1057,13 @@
     section .listing .list.classified-list {
 
         /*** HOME ADS CARDS LIST ***/
-        padding: 8px;
+        padding: 0px !important;
     }
 
+    .list.classified-list .tbx-tooltip {
+        font-size: 14pt !important;
+    }
+    
     section .listing .listing-item .list-icon {
 
         /*** HOME ADS CARDS LIST ICON ***/
@@ -977,20 +1099,32 @@
     section .listing .list.list-thread {
 
         /*** HOME FORUM CARDS THREAD LIST ***/
-        padding: 8px !important;
+        padding: 0px !important;
+    }
+    
+    section .listing .list.list-thread .thread-name {
+        font-size: 14pt !important;
     }
 
+    section .listing .thread-is-sticky .list-data .list-anchor,
+    section .listing .thread-is-closed .list-data .list-anchor {
+        line-height: 30pt !important;
+    }
+    
     section .listing .thread-is-sticky .list-data .list-anchor a.thread-name,
     section .listing .thread-is-closed .list-data .list-anchor a.thread-name {
 
         /*** HOME FORUM CARDS STICKY/CLOSED THREAD ***/
         background: var(--card-bg-2);
-        padding: 5px !important;
+        border: 1px solid var(--border-color);   
+        padding: 4px 8px 6px 8px !important;
     }
 
     section .listing .listing-title {
 
         /*** HOME COMMUNITY CARDS LIST SECTION TITLE ***/
+        background: transparent;
+        border-top: none;
         border-bottom: 1px solid var(--border-color) !important;
         color: var(--primary-color) !important;
         font-size: 14pt !important;
@@ -1002,7 +1136,7 @@
     section .listing .stamp.blog-stamp {
 
         /*** HOME COMMUNITY CARDS LIST ***/
-        padding: 10px 0px 10px 5px !important;
+        padding: 3px !important;
         overflow: visible !important;
     }
 
@@ -1026,6 +1160,12 @@
     /* SEARCH */
 
     /** DESCRIPTION : change the elements of the search page **/
+    .tbx-searchbox .form {
+        background: transparent !important;
+        border: none !important;
+        padding: 5px !important;
+    }
+    
     h3 {
         border-bottom: 1px solid var(--border-color) !important;
         padding: 5px 0px !important;
@@ -1079,6 +1219,12 @@
         color: var(--primary-color) !important;
     }
     
+    .item-group-by h3 {
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed;
+    }
+    
     /* ENTRY */
     
     /** DESCRIPTION : change the elements of the entry page **/
@@ -1113,15 +1259,27 @@
         font-size: 12pt !important;
         font-stretch: condensed;
     }
-    
+
     .nothing, 
     .listing li.listing-nothing {
         background: transparent !important;
     }
     
+    /* ENCYCLOPEDIA */
+    
+    /** DESCRIPTION : change the elements of the encyclopedia page **/
+    
+    .wrapper section .listing .stamp.entry-stamp {
+        padding: 0px !important;
+    }
+    
     /* TAG */
     
     /** DESCRIPTION : change the elements of the tag page **/
+    .wrapper section .listing .stamp.tag-stamp {
+        padding: 0px !important;
+    }
+    
     .listing-text-query * {
         font-size: 12pt !important;
     }
@@ -1136,10 +1294,36 @@
     /* SHOP */
 
     /** DESCRIPTION : change the elements of the shop page **/
+    .shop-object {
+        margin: -12px -10px !important;
+    }
+    
+    .object-wrapper.shop-content {
+        padding: 0px !important;
+    }
+    
+    .object-wrapper.shop-content .form,
+    .object-wrapper.shop-content .form-label, 
+    .object-wrapper.shop-content .form-input, 
+    .object-wrapper.shop-content .form-field {
+        background: transparent !important;
+        border: none !important;
+    }
+    
+    .object-wrapper.shop-content .form-label {
+        border-bottom: 1px solid var(--border-color) !important;
+        padding-left: 0px;
+        padding-bottom: 8px;
+    }
+    
+    .object-wrapper.shop-content .form-input {
+        margin-bottom: 10px;
+    }
+    
     .list.shop-list.shop-is-partner {
         background: transparent !important;
     }
- 
+    
     .shop-content {
         background: transparent !important;
         border: none !important;
@@ -1153,13 +1337,13 @@
         padding: 7px 12px 9px 12px !important;
         margin: -1px -10px !important;
     }
-
+    
     .shop-category {
         border-radius: 2px !important;
         font-size: 12pt !important;
         padding-bottom: 3px !important;
     }
-   
+    
     .shop-category .tiny-icon-before::before {
         color: #FFF !important;
     }
@@ -1191,21 +1375,29 @@
         border-top: 1px solid var(--border-color) !important;
     }
 
+
     .picture-awards {
         background: transparent !important;
         border: none !important;
+        padding: 0px !important;
     }
 
     .picture-awards * {
         color: var(--primary-color);
         font-size: 12pt;
         font-stretch: condensed;
+    }    
+    
+    .picture-award {
+        border: 1px solid var(--border-color);
+        border-radius: 2px;
+        margin-right: 0px;
+        margin-top: 20px !important;
     }
 
     .listing-count-pages {
-        float: right !important;
-        line-height: 24px !important;
-        margin: 8px 12px !important;
+        border: none;
+        margin-top: -10px !important;
     }
 
     .listing-count-pages a:link,
@@ -1215,9 +1407,8 @@
     }
 
     .listing-count-value {
-        float: left !important;
-        margin: 10px 12px 8px 12px !important;
-        line-height: 24px !important;
+        margin-top: -10px !important;
+        margin-bottom: 5px;
         white-space: nowrap !important;
         min-width: 0px !important;
     }
@@ -1257,6 +1448,7 @@
     }
 
     .step {
+        background: transparent;
         border-top: 1px solid var(--border-color);
     }
 
@@ -1351,17 +1543,36 @@
     /* ARTICLES */
 
     /** DESCRIPTION : change the elements of the articles page **/
+    .h1_categories * {
+        color: #FFF !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
+        font-weight: bold !important;
+    }
+    
+    .h1_categories .blog-category,
+    .h1_categories .category {
+        padding-top: 6px !important;
+        opacity: 1;
+    }
+    
     .blog-content {
         background: transparent !important;
         border: none !important;
         padding: 20px 15px !important;
     }
 
-    .blog-content * {
+    .blog-content *,
+    div[itemprop="articleBody"] * {
         color: var(--primary-color) !important;
         font-size: 14pt !important;
         font-stretch: condensed !important;
         line-height: 20pt;
+    }
+    
+    .blog-object .object-wrapper {
+        border: none !important;
+        padding: 20px 10px 10px 10px;
     }
 
     .blog-score {
@@ -1381,6 +1592,8 @@
         background: transparent;
         font-size: 12pt;
         font-stretch: condensed;
+        padding: 0px 2px 2px 2px !important;
+        margin: 0px !important;
     }
 
     .over18.tbx-toggle {
@@ -1397,15 +1610,22 @@
         background: transparent !important;
         border: none !important;
     }
+    
+    .poll-option.poll-option-result {
+        background: var(--body-bg) !important;
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+    }
 
     .poll .poll-option-vote,
     .poll .poll-option-bar {
         background: var(--card-bg-2);
         border: 1px solid var(--border-color);
-        border-radius: 2px;
+        border-radius: 1px;
         color: var(--primary-color) !important;
         font-size: 12pt !important;
         font-stretch: condensed;
+        margin: -1px !important;
     }
 
     .poll .poll-option-value {
@@ -1417,13 +1637,23 @@
     .poll .poll-meta {
         background: transparent;
         border: none;
-        font-size: 12pt;
+        color: var(--primary-color);
+        font-size: 14pt;
         font-stretch: condensed;
     }
 
     .poll .tbx-click.poll-option-percent {
         font-size: 12pt;
         font-stretch: condensed;
+    }
+    
+    #side section .section-content .bbcode {
+        padding: 0px 5px 5px 5px !important;
+    }
+    
+    .comments code {
+        background: var(--card-bg) !important;
+        border-color: var(--border-color);
     }
 
     /* CREATE */
@@ -1463,7 +1693,7 @@
 
     .bbcode-buttons {
         background: transparent !important;
-        border-color: var(--border-color) !important;
+        border-bottom: 1px solid var(--border-color) !important;
         padding: 3px 3px 0px 3px !important;
         margin: -4px -10px 10px -10px;
     }
@@ -1546,7 +1776,8 @@
     /* LISTS */
 
     /** DESCRIPTION : change the elements of the lists page **/
-    .itemlist-content {
+    .itemlist-content,
+    .itemlist-object .object-wrapper {
         background: transparent !important;
         border: none !important;
     }
@@ -1606,7 +1837,7 @@
         margin-top: 0px !important;
         padding-right: 2px !important;
     }
-
+    
     .listing-filter-menu.tbx-menu .handle .icon {
         color: var(--primary-color);
         visibility: visible !important;
@@ -1621,9 +1852,11 @@
     }
 
     .listing-toggles {
+        border-top-style: solid !important;
         border-bottom: 1px solid var(--border-color) !important;
-        padding: 5px 5px 10px 5px !important;
+        padding: 8px 5px 10px 5px !important;
         text-align: center;
+        margin-bottom: 15px !important;
     }
 
     .listing-toggles * {
@@ -1640,6 +1873,10 @@
     .listing-toggles .tiny-icon-before {
         margin-top: -3px !important;
         margin-right: 8px;
+    }
+    
+    .listing-count {
+        border-top: 1px solid var(--border-color) !important;
     }
 
     .listing-count * {
@@ -1674,6 +1911,10 @@
         letter-spacing: 0px;
         text-transform: lowercase !important;
     }
+    
+    .criterion-label {
+        line-height: 35px !important;
+    }
 
     .criterion-preview {
         background: var(--card-bg-2) !important;
@@ -1691,8 +1932,14 @@
 
     .listing-noresults {
         background: transparent !important;
-        font-size: 12pt;
+        border: none !important;
+        font-size: 14pt;
         font-stretch: condensed;
+        margin-top: -15px !important;
+    }
+    
+    .classified-price * {
+        color: #009432 !important; 
     }
 
     /* ADS ITEM */
@@ -1702,7 +1949,7 @@
     .custom #ariadne {
         background: transparent;
         color: var(--primary-color) !important;
-        font-size: 12pt !important;
+        font-size: 14pt !important;
         font-stretch: condensed !important;
         padding: 8px !important;
     }
@@ -1741,13 +1988,17 @@
     section h1 .actions a:hover {
         color: var(--primary-color);
     }
+    
+    .classified-object .object-wrapper {
+        border: none !important;
+    }
 
     section .object-meta {
         background: var(--card-bg-2) !important;
         border-bottom: 1px solid var(--border-color) !important;
         padding: 10px 11px !important;
         text-align: left;
-        margin: 0px -10px;
+        margin: -8px -10px;
     }
 
     section .object-meta .user-anchor img {
@@ -1755,10 +2006,23 @@
         border-radius: 50%;
         margin-top: 2px !important;
     }
+    
+    .location {
+        color: var(--primary-color);
+    }
+
+    .glob_button.tbx-window .tiny-icon-before {
+        margin-top: -2px !important;
+    }
 
     section .object-meta * {
         font-size: 12pt;
         font-stretch: condensed;
+    }
+    
+    .classified-user-info, .classified-user-info * {
+        font-size: 12pt !important;
+        line-height: 20pt !important;
     }
 
     section .object-meta .user-anchor {
@@ -1767,9 +2031,10 @@
 
     section .object-meta .category,
     section .object-meta .time {
+        border-radius: 2px;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         line-height: 12pt;
-        padding: 7px 10px 8px 10px;
+        padding: 9px 10px 8px 10px;
         text-transform: lowercase;
     }
 
@@ -1843,21 +2108,6 @@
         font-stretch: condensed;
     }
 
-    .inner-caret,
-    .caret .inner {
-        border-top: 7px solid transparent !important;
-        border-right: 7px solid var(--card-bg-2) !important;
-        border-bottom: 7px solid transparent !important;
-    }
-
-    .outer-caret,
-    .caret .outer {
-        border-top: 8px solid transparent !important;
-        border-right: 8px solid var(--border-color) !important;
-        border-bottom: 8px solid transparent !important;
-        display: block !important;
-    }
-
     .classified-object .classified-contact-button:link,
     .classified-object .classified-contact-button:visited {
         background: var(--card-bg-2);
@@ -1876,20 +2126,31 @@
         padding: 8px !important;
     }
 
+    .object-stats,
     .object-stats * {
         color: var(--secondary-color) !important;
+        font-size: 12pt !important;
     }
 
     /* CLUBS */
 
     /** DESCRIPTION : change the elements of the clubs page **/
     .listing .listing-item.grid-2 {
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
         margin: 5px 4px !important;
-        width: calc(50% - 10px) !important;
+        padding: 0px !important;
     }
 
     .stamp.club-stamp * {
+        font-size: 12pt !important;
         line-height: 14pt !important;
+    }
+    
+    .club-object .bbcode {
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
     }
 
     section .listing .listing-item .list-club .list-icon {
@@ -1897,17 +2158,14 @@
     }
 
     .club-banner {
-        margin: 10px -10px !important;
-    }
-
-    .club-banner .the-banner {
         background-color: var(--card-bg-2) !important;
         border-top: 1px solid var(--border-color) !important;
         border-bottom: 1px solid var(--border-color) !important;
+        margin: 10px -10px 7px -10px !important;
     }
 
-    .club-banner .the-icon {
-        background: var(--card-bg-2) !important;
+    .club-icon {
+        background: var(--card-bg) !important;
         border-radius: 50% !important;
     }
 
@@ -1923,6 +2181,14 @@
         border: none;
         padding: 10px 8px !important;
     }
+    
+    .club-object .object-wrapper {
+        background: transparent;
+        border: none;
+        padding: 10px !important;
+        margin-top: 10px;
+    }
+
 
     .itemlist-object .itemlist-content *,
     .alert-content *,
@@ -1934,48 +2200,48 @@
         line-height: 20pt;
     }
 
+    #side .listing .listing-item .stamp.user-stamp {
+        padding: 5px !important;    
+    }
+    
     /* FORUM */
 
     /** DESCRIPTION : change the elements of the forum page **/
     .reply {
-        border: none;
+        background: var(--card-bg);
+        border-color: var(--border-color);
+        border-radius: 2px;
     }
-
-    .listing-reply.tbx-target {
-        border-bottom: 1px solid var(--border-color);
+    
+    .reply-meta {
+        background: var(--card-bg);
+        border-color: var(--border-color);
+        padding: 10px !important;
     }
-
-    .reply-author * {
-        color: var(--primary-color);
-        font-size: 12pt;
-        font-stretch: condensed;
-        line-height: 15pt !important;
-    }
-
-    .reply-author-avatar {
-        border: 1px solid var(--border-color) !important;
-        border-radius: 50% !important;
-    }
-
-    .reply-author-meta {
-        margin-left: 0px !important;
-    }
-
+    
     .reply-meta * {
-        color: var(--secondary-color) !important;
-        font-size: 12pt;
+        color: var(--primary-color);
+        font-size: 14pt;
         font-stretch: condensed;
     }
-
-    .reply-content {
-        background: var(--card-bg-2);
-        border: 1px solid var(--border-color);
-        border-radius: 2px !important;
-        box-shadow: none !important;
+    
+    .reply-author-meta .tiny-icon-before {
+        margin-top: -3px !important;
     }
-
-    .reply-time * {
-        color: var(--secondary-color) !important;
+    
+    .reply-author-meta .tiny-icon-only.icon-envelope {
+        margin-top: -3px !important;
+    }
+    
+    .reply-avatar {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color);
+    }
+    
+    .reply-content, 
+    .reply-poll {
+        padding: 0px !important;
+        margin: 20px !important;
     }
 
     .reply-content * {
@@ -1985,21 +2251,53 @@
         font-stretch: condensed;
         line-height: 20pt;
     }
-
-    .reply-actions * {
-        font-size: 12pt;
+    
+    .reply-content .bbcode .quote {
+        background: var(--card-bg-2) !important;
+    }
+    
+    .reply-author-signature {
+        border-top: 1px solid var(--border-color) !important;
+    }
+    
+    .reply-actions {
+        background: var(--card-bg);
+        border-top: 1px solid var(--border-color);
+        padding: 5px 8px 8px 8px !important;
+    }
+    
+    .reply-actions .action,
+    .reply-actions .tbx-click,
+    .reply-actions .tbx-window {
+        background: transparent;
+        font-size: 14pt;
         font-stretch: condensed;
     }
-
+    
     #ref-thread-bottom {
-        background: transparent !important;
+        padding: 0px !important;
+        margin-top: -10px !important;
     }
-
-    .tbx-window.thread-reply-button {
-        color: #FFF !important;
-        font-size: 12pt !important;
-        font-stretch: condensed !important;
-        padding-bottom: 2px !important;
+    
+    .tbx-window.glob_button {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        font-size: 14pt;
+        font-stretch: condensed;
+        padding: 4px 10px;
+        margin-bottom: 10px;
+    }
+    
+    /* ALERT */
+    
+    /** DESCRIPTION : change the elements of the alert page **/
+    .alert-object .object-wrapper {
+        border: none !important;
+        color: var(--primary-color);
+        font-stretch: condensed;
+        font-size: 14pt !important;
+        padding: 20px !important;
     }
     
     /* PROFILE */
@@ -2023,7 +2321,6 @@
         margin-top: -10px;
         margin-right: -10px;
     }
-
     .the-avatar {
         background: var(--card-bg-2) !important;
         border: 2px solid var(--border-color) !important;
@@ -2035,6 +2332,11 @@
         color: var(--primary-color);
         font-size: 14pt;
         font-stretch: condensed;
+    }
+    
+    .user-status-content {
+        border: none !important;
+        padding-bottom: 20px !important;
     }
 
     .user-object .user-meta * {
@@ -2097,12 +2399,15 @@
         background: transparent !important;
         padding: 0px !important;
     }
-    
-    .item-picture-categories a[class*="picture-category-"] *, 
-    .item-picture-categories a[class*="picture-category-"] {
-        color: #FFF !important;
-    }
 
+     
+    .item-picture-categories a[class*="picture-category-"],
+    .item-picture-categories a[class*="picture-category-"] *,
+    .user-picture-categories a[class*="picture-category-"] {
+        color: #FFF !important;
+        font-size: 12pt !important;
+    }
+    
     section .listing .object-grid {
 
         /*** PROFILE OVERVIEW FAVORITE USERS ***/
@@ -2116,15 +2421,19 @@
         font-stretch: condensed;
     }
 
-    section .user-expression .expression .content .bbcode {
+    section .user-expression .expression .content .bbcode,
+    .object-description .bbcode {
 
         /*** PROFILE USER ABOUT THIS BLOG ***/
+        color: var(--primary-color);
         font-size: 14pt !important;
+        font-stretch: condensed;
         line-height: 20pt;
+        margin-top: 10px;
     }
 
     section .user-expression {
-        padding: 5px !important;
+        padding: 0px !important;
     }
 
     section .user-stats {
@@ -2157,6 +2466,7 @@
         /*** PROFILE ACTIVITY COLLECTION ITEMS ***/
         background: var(--card-bg-2) !important;
         border: 1px solid var(--border-color) !important;
+        margin-bottom: -1px;
     }
 
     .activity-wrapper * {
@@ -2213,7 +2523,7 @@
     }
 
     .comment .username a,
-    .comment .user-title {
+    .user-title {
         font-size: 14pt !important;
         font-stretch: condensed !important;
     }
@@ -2281,6 +2591,13 @@
     /* ITEM */
 
     /** DESCRIPTION : change the elements of the item page **/
+    .headline {
+        font-size: 20pt !important;
+        font-stretch: condensed !important;
+        line-height: 27pt !important;
+        margin-top: 8px !important;
+    }
+    
     .item-collect-actions.tbx-target-COLLECT {
         background: var(--card-bg-2) !important;
         border-bottom: 1px solid var(--border-color) !important;
@@ -2368,17 +2685,39 @@
         top: -5px !important;
     }
 
-    .split-right.righter .form {
+    .split-right .form {
         position: relative !important;
-        top: 20px !important;
+        top: 0px !important;
     }
 
-    .split-right.righter .form-field,
-    .split-right.righter .form-input {
+    .split-right .form,
+    .split-right .form-field,
+    .split-right .form-label,
+    .split-right .form-input {
         background: transparent !important;
         border: none !important;
         padding-top: 0px !important;
         padding-bottom: 5px !important;
+    }
+    
+    .split-right .form-field {
+        margin-bottom: 5px;
+    }
+    
+    .split-right .form-field .form-label {
+        border-bottom: 1px solid var(--border-color) !important;
+        padding-left: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .split-right .form-field .form-input {
+        font-size: 14pt !important;
+        padding-left: 0px;
+        margin-bottom: 5px;
+    }
+    
+    .split-right .form-field .form-input * {
+        font-size: 14pt !important;
     }
 
     .object-tags {
@@ -2410,7 +2749,31 @@
         font-stretch: condensed;
         line-height: 20pt;
     }
-
+    
+    div[class*="data_"] .form, 
+    div[class*="data_"] .form-field {
+        background: transparent !important;
+        border: none !important;
+    }
+    
+    div[class*="data_"] .form-field {
+        padding: 0px !important;
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+    
+    div[class*="data_"] .form-field:nth-last-child(1) {
+        border: none !important;
+    }
+    
+    .object-categories {
+        border: none !important;
+        padding: 0px !important;
+    }
+    
+    .object-category {
+        border-radius: 2px !important;
+    }
+    
     fieldset.comments {
 
         /*** ITEM COMMENTS ***/
@@ -2428,10 +2791,33 @@
     .spotlighted {
         background: transparent !important;
     }
+    
+    .section-more {
+        background: transparent;
+        border-top: 1px solid var(--border-color);
+        font-size: 14pt;
+        font-stretch: condensed;
+    }
+    
+    .comment .expression .content {
+        padding: 0px 10px 10px 10px !important;
+    }
+    
+    /* NOTIFICATIONS */
+    
+    /** DESCRIPTION : change the elements of the notifications page **/
+    .listing-activity {
+        border: none !important;
+    }
 
     /* MANAGER */
 
     /** DESCRIPTION : change the elements of the manager page **/
+    .listing-actions .tbx-window,
+    .listing-actions a {
+        background: transparent !important;
+    }
+    
     .listing-link-toggle.break {
         border-color: var(--border-color);
     }
@@ -2449,12 +2835,12 @@
         padding-left: 20px !important;
         margin-top: -1px;
         margin-right: -8px !important;
-        margin-left: -10px;
+        margin-left: -10px !important;
         left: 0px !important;
     }
 
     .tbx-window.message-preview {
-        border-color: var(--border-color) !important;
+        border-left: 3px solid var(--border-color);
         padding-bottom: 12px !important;
     }
 
@@ -2489,10 +2875,64 @@
         border-right: 7px solid transparent !important;
         border-left: 7px solid transparent !important;
     }
+    
+    .sheet {
+        margin-top: 10px !important;
+    }
+    
+    .sheet .cell {
+        background: transparent !important;
+        border-color: var(--border-color) !important;
+    }
+    
+    .sheet * {
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+    }
+    
+    .sheet .checked {
+        background: var(--card-bg-2) !important;
+    }
+    
+    .sheet .footer {
+        background: transparent !important;
+        border-top-style: solid !important;
+    }
 
     /* SETTINGS */
 
     /** DESCRIPTION : change the elements of the settings page **/
+    .tbx-upload-form .form,
+    .tbx-form .form,
+    #main .wrapper section .form {
+        background: transparent !important;
+        border: none !important;    
+        padding: 0px 12px 8px 12px !important;
+        margin-top: -14px !important;
+    }
+    
+    .form .form-field.long-text .form-input, 
+    .form .form-field.small-text .form-input, 
+    .form .form-field.text .form-input, 
+    .form .form-field.bigchar .form-input, 
+    .form .form-field.suggest .form-input,
+    .form .form-field.select .form-input, 
+    .form .form-field.varchar .form-input {
+        border-radius: 2px !important;
+    }
+    
+    .avatar.tbx-uploaded-images,
+    .form .form-field .form-input label {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+    }
+    
+    input[value="Save"] {
+        padding-bottom: 6px !important;
+    }
+    
     .date-chooser .date {
         background: var(--card-bg-2) !important;
         border-color: var(--border-color) !important;
@@ -2523,5 +2963,72 @@
         border: 1px solid var(--border-color);
         border-radius: 2px !important;
     }
+    
+    /* REPORT */
+    
+    /** DESCRIPTION : change the elements of the report page **/
+    .tbx-toggle.glob_button.tbx-toggle-hide-then {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        padding: 2px 15px 5px 12px !important;
+    }
+    
+    #wide .stamp-data {
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    #wide .section-content .stamp.user-stamp .stamp-anchor {
+        overflow: visible !important;
+    }
+    
+    #wide .section-content .stamp-meta {
+        margin-top: 6px !important;
+        overflow: visible !important;
+    }
+    
+    /* MORE */
+    
+    /** DESCRIPTION : change the elements of the more page **/
+    form[method="post"] .form,
+    form[method="get"] .form {
+        background: transparent !important;
+        border: none !important;
+        padding: 0px 10px 10px 10px !important;
+        margin-top: -10px !important;
+    }
+    
+    .form-help {
+        line-height: 20pt !important;
+    }
+    
+    .faq-index {
+        border: none;
+        padding: 10px !important;
+    }
+    
+    .faq-index li {
+        color: var(--primary-color);
+        font-size: 14pt;
+        font-stretch: condensed;
+    }
+    
+    .faq-meta {
+        border-color: var(--border-color) !important;
+        margin-left: -31px !important;
+        margin-right: -31px !important;
+        margin-bottom: -20px !important;
+    }
 
+    .faq-meta input {
+        color: var(--primary-color);
+        font-size: 14pt;
+        font-stretch: condensed !important;
+    }
+
+    .faq code {
+        background: var(--card-bg-2);
+        border-color: var(--border-color);
+    }
 }
