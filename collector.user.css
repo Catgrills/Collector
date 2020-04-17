@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.1.8
+@version        1.1.9
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -787,6 +787,10 @@
     .h1_icon .icon {
         background: var(--card-bg);
         border: 1px solid var(--border-color);
+    }
+    
+    .h1_actions {
+        margin-top: -3px !important;
     }
     
     .h1_actions a.action {
