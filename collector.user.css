@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.2.2
+@version        1.2.3
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -2603,10 +2603,10 @@
 
     /** DESCRIPTION : change the elements of the item page **/
     .headline {
-        font-size: 20pt !important;
+        font-size: 17pt !important;
         font-stretch: condensed !important;
         line-height: 27pt !important;
-        margin-top: 8px !important;
+        margin-top: 3px !important;
     }
     
     .item-collect-actions.tbx-target-COLLECT {
