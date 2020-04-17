@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.2.5
+@version        1.2.6
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1786,7 +1786,8 @@
         border: none !important;
     }
 
-    .itemlist-content * {
+    .itemlist-content *,
+    .itemlist-object * {
         color: var(--primary-color) !important;
         font-size: 14pt !important;
         font-stretch: condensed !important;
