@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.2.7
+@version        1.2.8
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -292,7 +292,8 @@
     .item-stamp .stamp-anchor a.item-category-2,
     a.user-access-rank-2,
     .user-access-rank-2,
-    .external-link,
+    a.external-link,
+    .bbcode a.external-link,
     span[style="color:#000080"] {
         color: #4A69BD !important;
     }
