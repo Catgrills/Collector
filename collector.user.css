@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.4.0
+@version        1.4.1
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -2003,7 +2003,7 @@
         color: #009432 !important; 
     }
 
-    /* ADS ITEM */
+   /* ADS ITEM */
 
     /** DESCRIPTON : change the elements of the ads item page **/
     #ariadne,
@@ -2052,6 +2052,15 @@
     
     .classified-object .object-wrapper {
         border: none !important;
+        padding: 10px 0px !important;
+    }
+    
+    .classified-object .split-left {
+        width: 40% !important;
+    }
+    
+    .classified-object .split-right {
+        width: 60% !important;
     }
 
     section .object-meta {
@@ -2081,9 +2090,10 @@
         font-stretch: condensed;
     }
     
-    .classified-user-info, .classified-user-info * {
-        font-size: 12pt !important;
+    .classified-user-info, 
+    .classified-user-info * {
         line-height: 20pt !important;
+        white-space: nowrap;
     }
 
     section .object-meta .user-anchor {
@@ -2167,6 +2177,22 @@
         color: var(--primary-color) !important;
         font-size: 12pt;
         font-stretch: condensed;
+    }
+    
+    .classified-object .form-field .form-input .stamp-anchor {
+        height: auto !important;
+        width: auto !important;
+        line-height: 20pt !important;
+    }
+    
+    .classified-object .form-field .form-input .stamp-anchor a {
+        white-space: normal !important;
+    }
+    
+    .classified-object .form-field:last-child .form-input,
+    .classified-object .form-field:nth-last-child(2) .form-input {
+        background: var(--card-bg-2) !important;
+        border: none !important;
     }
 
     .classified-object .classified-contact-button:link,
