@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.3.8
+@version        1.3.9
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -2759,28 +2759,28 @@
         top: -5px !important;
     }
     
-    .form .form-field { 
+    .split-right .form .form-field { 
         display: table-row; 
     }
 
-    .form .form-label, 
-    .form .form-input { 
+    .split-right .form .form-label, 
+    .split-right .form .form-input { 
         display: table-cell; 
     }
 
-    .form .form-label { 
+    .split-right .form .form-label { 
         text-align: right; 
         vertical-align: top; 
         padding: 11px !important; 
     }
 
-    .data .form { 
+    .split-right .data .form { 
         background-color: inherit; 
         border: 1px solid var(--border-color) !important;
         border-radius: 2px;
     }
 
-    .data .form > .form-field:last-child > .form-label { 
+    .split-right .data .form > .form-field:last-child > .form-label { 
         border-bottom: none !important; 
     }
     
