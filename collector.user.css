@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.4.1
+@version        1.4.2
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -369,7 +369,7 @@
     header .wrapper {
         background: transparent !important;
         box-shadow: none !important;
-        max-width: 100% !important;
+        max-width: 1320px !important;
     }
 
     .desktop.home {
