@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.4.2
+@version        1.4.3
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -809,13 +809,26 @@
         padding: 8px 0px !important;
     }
     
-    .h1_headline {
+   .content-headline {
         
         /*** HOME HEAD LINES ***/
+        background: transparent !important;
+        border: none !important;
+        margin: 0px 10px !important;
+    }
+    
+    .h1_headline {
         color: var(--primary-color);
         font-size: var(--header-font) !important;
         font-stretch: condensed;
         margin-top: -5px !important;
+    }
+    
+    .h1_actions .action {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        padding: 0px 12px !important;
     }
     
     .h1_icon .icon {
