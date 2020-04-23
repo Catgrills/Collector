@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.4.4
+@version        1.4.5
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -825,9 +825,8 @@
     }
     
     .h1-meta-actions .action {
-        background: var(--card-bg) !important;
-        border: 1px solid var(--border-color) !important;
-        border-radius: 2px !important;
+        background: transparent !important;
+        border: none !important;
         font-size: 14pt !important;
         font-stretch: condensed;
         font-weight: bold !important;
