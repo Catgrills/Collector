@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.4.9
+@version        1.5.0
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -2799,50 +2799,50 @@
         top: -5px !important;
     }
     
-    .split-right .form .form-field { 
+    .object-wrapper .split-right .form .form-field { 
         display: table-row; 
     }
 
-    .split-right .form .form-label, 
-    .split-right .form .form-input { 
+    .object-wrapper .split-right .form .form-label, 
+    .object-wrapper .split-right .form .form-input { 
         display: table-cell; 
     }
 
-    .split-right .form .form-label { 
+    .object-wrapper .split-right .form .form-label { 
         text-align: right; 
         vertical-align: top; 
         padding: 11px !important; 
     }
 
-    .split-right .data .form { 
+    .object-wrapper .split-right .data .form { 
         background-color: inherit; 
         border: 1px solid var(--border-color) !important;
         border-radius: 2px;
     }
 
-    .split-right .data .form > .form-field:last-child > .form-label { 
+    .object-wrapper .split-right .data .form > .form-field:last-child > .form-label { 
         border-bottom: none !important; 
     }
     
-    .split-right .form-field .form-label {
+    .object-wrapper .split-right .form-field .form-label {
         background: var(--card-bg-2);
         border-bottom: 1px solid var(--border-color) !important;
         padding-left: 0px;
         margin-bottom: 10px;
     }
     
-    .split-right .form-field .form-input {
+    .object-wrapper .split-right .form-field .form-input {
         background: var(--body-bg);
         border-left: 1px solid var(--border-color);
         border-bottom: 1px solid var(--border-color);
         font-size: 14pt !important;
     }
     
-    .split-right .form-field:last-child .form-input {
+    .object-wrapper .split-right .form-field:last-child .form-input {
         border-bottom: none !important;
     }
     
-    .split-right .form-field .form-input * {
+    .object-wrapper .split-right .form-field .form-input * {
         font-size: 14pt !important;
     }
 
