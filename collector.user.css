@@ -76,8 +76,8 @@
         background-color: var(--body-bg-op-2) !important;
     }
 
-    #content .content_wrapper {
-        width: 95% !important;
+    .content_wrapper {
+        max-width: 95% !important;
     }
     
     .h1_actions a.action:hover, 
@@ -369,7 +369,7 @@
     header .wrapper {
         background: transparent !important;
         box-shadow: none !important;
-        max-width: 1320px !important;
+        max-width: 98% !important;
     }
 
     .desktop.home {
@@ -814,7 +814,9 @@
         /*** HOME HEAD LINES ***/
         background: transparent !important;
         border: none !important;
-        margin: 0px 10px -30px 10px !important;
+        width: 97% !important;
+        margin: 0 auto !important;
+        margin-bottom: -20px !important;
     }
     
     .h1-headline-value {
