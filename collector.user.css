@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.4.8
+@version        1.4.9
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -204,7 +204,7 @@
     .icon-lightbulb-o::before,
     .icon-bolt,
     .icon-bolt::before,
-    .icon-star::before {
+    .tiny-icon-before.icon-star::before {
         color: #FFD32A;
     }
 
@@ -1082,13 +1082,12 @@
         margin-top: 2px;
     }
 
-    .star.off.icon-star.on::before {
+    .star.tbx-click.icon-star.on {
         color: #E58E26 !important;
     }
     
-    .off.icon-star::before,
-    .star.off.icon-star::before {
-        color: #BEBEBE !important;
+    .star.tbx-click.icon-star {
+        color: #BEBEBE;
     }
 
     .item-icons .item-icon a .item-is-draft {
@@ -1477,7 +1476,7 @@
         font-size: 12pt !important;
         font-stretch: condensed !important;
         padding: 5px 10px !important;
-        margin-top: -5px !important;
+        margin-top: 5px !important;
         margin-left: 10px !important;
     }
 
