@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.5.1
+@version        1.5.2
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -505,16 +505,15 @@
         background: transparent;
         border-color: #a3a4aa !important;
         color: #FFF !important;
-        line-height: 22pt !important;
     }
 
     .suggestions fieldset {
         margin-left: 0px;
     }
 
-    .suggestions img {
-        border-radius: 50% !important;
-        margin: 8px 8px 0px 0px !important;
+    .tbx-suggestions-target .tiny-icon-before {
+        margin-top: -13px !important;
+        margin-right: 11px !important;
     }
 
     .suggestions .all {
