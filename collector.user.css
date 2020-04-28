@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.5.0
+@version        1.5.1
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1084,7 +1084,8 @@
         margin-top: 2px;
     }
 
-    .star.tbx-click.icon-star.on {
+    .star.tbx-click.icon-star.on,
+    .score .on.icon-star {
         color: #E58E26 !important;
     }
     
@@ -1431,13 +1432,12 @@
     }
 
 
-    .picture-awards {
-        background: transparent !important;
+    .picture-award {
+        background-color: transparent !important;
         border: none !important;
-        padding: 0px !important;
     }
 
-    .picture-awards * {
+    .picture-award * {
         color: var(--primary-color);
         font-size: 12pt;
         font-stretch: condensed;
