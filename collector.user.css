@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.5.2
+@version        1.5.3
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -221,7 +221,7 @@
         background: #006266 !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         color: #FFF !important;
-        font-size: 12pt !important;
+        font-size: 12pt;
     }
     
     .category.user-access-rank.user-access-rank-0.user-honorific-rank-0 {
@@ -239,14 +239,14 @@
         background: #574b90 !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         color: #FFF !important;
-        font-size: 12pt !important;
+        font-size: 12pt;
     }
 
     .blog-category-1 {
         background: #3d3d3d !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         color: #FFF !important;
-        font-size: 12pt !important;
+        font-size: 12pt;
     }
 
     .blog-category-2,
@@ -254,7 +254,7 @@
         background: #B33939 !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         color: #FFF !important;
-        font-size: 12pt !important;
+        font-size: 12pt;
     }
 
     .blog-category-3,
@@ -264,7 +264,7 @@
         background: #182C61 !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         color: #FFF !important;
-        font-size: 12pt !important;
+        font-size: 12pt;
     }
 
     .blog-category-4,
@@ -273,7 +273,7 @@
         background: #84817A !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         color: #FFF !important;
-        font-size: 12pt !important;
+        font-size: 12pt;
     }
 
     .blog-category-6,
@@ -281,7 +281,7 @@
         background: #FF793F !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         color: #FFF !important;
-        font-size: 12pt !important;
+        font-size: 12pt;
     }
     
     .category.club-category-0,
