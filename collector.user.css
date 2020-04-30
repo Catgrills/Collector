@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.5.3
+@version        1.5.4
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -512,7 +512,7 @@
     }
 
     .tbx-suggestions-target .tiny-icon-before {
-        margin-top: -13px !important;
+        margin-top: -3px !important;
         margin-right: 11px !important;
     }
 
