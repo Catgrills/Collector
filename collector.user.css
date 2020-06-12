@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.5.5
+@version        1.5.6
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1046,6 +1046,7 @@
     }
 
     .item-is-collected-as,
+    .item-is-liked,
     .item-times-collected,
     .item-icons .item-icon .item-is-alerted {
 
@@ -1072,10 +1073,15 @@
     }
 
     .item-icon .item-is-collected-as .icon-star::before,
+    .item-is-liked .tiny-icon-only.icon-heart::before,
     .tiny-icon-only.icon-shopping-cart::before,
     .item-icons .item-icon .item-is-alerted .icon-bullhorn::before {
         color: #FFF !important;
         line-height: 44pt !important;
+    }
+    
+    .item-is-liked .tiny-icon-only.icon-heart::before {
+        font-size: 15pt !important; 
     }
 
     .tbx-score.score {
