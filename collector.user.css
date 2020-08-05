@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.5.8
+@version        1.5.9
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -1913,6 +1913,10 @@
         font-family: "Roboto";
         font-size: 12pt;
         font-stretch: condensed !important;
+    }
+    
+    .tbx-auto-submit {
+        background-color: transparent !important;
     }
 
     input[type="button"],
