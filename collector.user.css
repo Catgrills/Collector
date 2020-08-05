@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.5.6
+@version        1.5.8
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -46,6 +46,7 @@
     }
     `
 }
+
 ==/UserStyle== */
 @-moz-document domain("myfigurecollection.net") {
 
@@ -76,8 +77,15 @@
         background-color: var(--body-bg-op-2) !important;
     }
 
-    .content_wrapper {
+    .content-wrapper {
         max-width: 95% !important;
+    }
+    
+    .pswp__counter {
+        
+        /*** PAGE COUNTER ***/
+        font-weight: bold !important;
+        margin-top: 5px !important;
     }
     
     .h1_actions a.action:hover, 
@@ -224,11 +232,14 @@
         font-size: 12pt;
     }
     
-    .category.user-access-rank.user-access-rank-0.user-honorific-rank-0 {
+    .category.user-access-rank.user-access-rank-0.user-honorific-rank-0,
+    .category.classified-type-0 {
         background: #006266 !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         color: #FFF !important;
         font-size: 14pt !important;
+        font-stretch: condensed;
+        font-weight: bold;
         margin-right: 15px !important;
     }
 
@@ -807,6 +818,15 @@
         padding: 8px 0px !important;
     }
     
+    .home-about {
+        
+        /*** HOME ABOUT ***/
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        line-height: 20pt !important;
+    }
+    
     .content-headline {
         
         /*** HOME HEAD LINES ***/
@@ -824,9 +844,14 @@
         margin-top: -5px !important;
     }
     
+    .h1-meta-actions {
+        margin-top: 2px !important;
+    }
+    
     .h1-meta-actions .action {
         background: transparent !important;
         border: none !important;
+        border-radius: 2px !important;
         font-size: 14pt !important;
         font-stretch: condensed;
         font-weight: bold !important;
@@ -850,11 +875,12 @@
         border: 1px solid var(--border-color) !important;
     }
 
+    .custom section,
     section {
 
         /*** HOME ALL CARDS ***/
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
         border-radius: 2px !important;
         padding: 8px 10px !important;
         margin-bottom: 20px !important;
@@ -1046,8 +1072,8 @@
     }
 
     .item-is-collected-as,
-    .item-is-liked,
     .item-times-collected,
+    .item-is-liked,
     .item-icons .item-icon .item-is-alerted {
 
         /*** HOME DATABASES CARDS FAVORITE ICON  ***/
@@ -1072,8 +1098,8 @@
         line-height: 44pt !important;
     }
 
-    .item-icon .item-is-collected-as .icon-star::before,
     .item-is-liked .tiny-icon-only.icon-heart::before,
+    .item-icon .item-is-collected-as .icon-star::before,
     .tiny-icon-only.icon-shopping-cart::before,
     .item-icons .item-icon .item-is-alerted .icon-bullhorn::before {
         color: #FFF !important;
@@ -1082,21 +1108,22 @@
     
     .item-is-liked .tiny-icon-only.icon-heart::before {
         font-size: 15pt !important; 
-    }
 
+    }
+    
     .tbx-score.score {
         margin-top: 2px;
     }
-
+    
     .star.tbx-click.icon-star.on,
     .score .on.icon-star {
         color: #E58E26 !important;
     }
-    
+
     .star.tbx-click.icon-star {
         color: #BEBEBE;
     }
-
+    
     .item-icons .item-icon a .item-is-draft {
         color: #FFF !important;
         font-size: 10pt !important;
@@ -2021,7 +2048,7 @@
         color: #009432 !important; 
     }
 
-   /* ADS ITEM */
+    /* ADS ITEM */
 
     /** DESCRIPTON : change the elements of the ads item page **/
     #ariadne,
@@ -2819,7 +2846,7 @@
     }
 
     .object-wrapper .split-right .data .form { 
-        background-color: inherit; 
+        background-color: var(--card-bg-2); 
         border: 1px solid var(--border-color) !important;
         border-radius: 2px;
     }
@@ -2907,8 +2934,11 @@
     
     .object-category,
     .object-category * {
-        color: #FFF !important;
         font-size: 12pt !important;
+    }
+    
+    .object-category * {
+        color: #FFF !important;
     }
     
     fieldset.comments {
@@ -3168,4 +3198,5 @@
         background: var(--card-bg-2);
         border-color: var(--border-color);
     }
+    
 }
