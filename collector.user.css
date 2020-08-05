@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Collector
 @namespace      https://github.com/Catgrills/Collector
-@version        1.6.0
+@version        1.6.1
 @description    An user style for MyFigureCollection called Collector.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -665,7 +665,8 @@
     }
     
     .window-content ul.listing {
-        padding-top: 15px !important;
+        background: var(--card-bg);
+        padding: 10px 0px 15px 0px !important;
     }
 
     #window .wrapper .listing-activity {
